@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+testing {
+    suites {
+        test {
+            useJUnitJupiter('5.9.0-RC1')
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'org.assertj:assertj-core:3.23.1'
+}
